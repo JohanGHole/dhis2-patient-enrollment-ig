@@ -1,9 +1,9 @@
 Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/fsh-generated/resources/ImplementationGuide-patient.enrollment.json	2691	-	1	0	0	0	0	0	7	185	0	0	0	0	0	0	0	0	0	0	83	68	0	0	0	5	0	0
-fsh-generated/resources/CodeSystem-gender-cs.json	352	13	0	0	0	0	0	0	0	15	0	0	0	0	0	0	0	0	0	0	15	1830	0	0	0	1	0	0
-fsh-generated/resources/ConceptMap-Dhis2GenderToAdministrativeGender.json	1709	11	0	0	0	0	0	0	0	17	0	0	0	0	0	0	0	1	0	0	23	57	0	0	0	1	0	0
-fsh-generated/resources/Patient-TransformedPatient.json	488	12	0	0	0	0	0	0	0	260	0	0	0	0	0	0	0	0	0	0	13	12	0	0	0	0	0	0
-fsh-generated/resources/StructureDefinition-PatientEnrollmentProgram.json	4779	14	0	0	0	0	0	12	0	40	0	0	1	0	0	0	0	0	0	0	134	833	0	0	0	4	0	1
-fsh-generated/resources/ValueSet-gender-vs.json	297	19	0	0	0	0	0	0	1	51	0	0	0	0	0	0	0	0	0	0	14	3451	0	0	0	0	0	0
-input/maps/patientEnrollmentToPatientResource.map	1606	28	0	0	0	0	0	0	2	23	0	0	0	0	0	0	0	0	0	0	52	23	0	0	0	2	0	0
-/fsh-generated/resources/Binary-patientEnrollmentExample.json	353	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	9	7	0	0	0	0	0	0
+/fsh-generated/resources/ImplementationGuide-patient.enrollment.json	2691	-	0	0	0	0	0	0	6	188	0	0	0	0	0	0	0	0	0	0	84	78	0	0	0	5	0	1
+fsh-generated/resources/CodeSystem-gender-cs.json	352	15	0	0	1	0	0	0	0	14	0	0	1	0	0	0	0	0	0	0	16	1794	0	0	0	1	0	0
+fsh-generated/resources/ConceptMap-Dhis2GenderToAdministrativeGender.json	1709	14	1	0	0	0	0	0	0	17	0	0	0	0	0	0	0	0	0	0	24	57	0	0	0	1	0	0
+fsh-generated/resources/Patient-TransformedPatient.json	488	16	0	0	0	0	0	0	1	280	0	0	0	0	0	0	0	0	0	0	14	19	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-PatientEnrollmentProgram.json	4779	12	0	0	0	0	0	11	0	48	0	0	0	0	0	0	0	1	0	0	134	831	0	0	0	7	0	0
+fsh-generated/resources/ValueSet-gender-vs.json	297	13	0	0	0	0	0	0	0	57	0	0	0	0	0	0	0	0	0	0	9	4212	0	0	0	0	0	0
+input/maps/patientEnrollmentToPatientResource.map	1606	24	0	0	0	0	0	0	2	23	0	0	0	0	0	0	0	0	0	0	42	27	0	0	0	3	0	0
+/fsh-generated/resources/Binary-patientEnrollmentExample.json	353	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	8	7	0	0	0	0	0	0
