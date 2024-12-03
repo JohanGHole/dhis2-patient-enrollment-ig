@@ -4,6 +4,8 @@ This Implementation Guide (IG) contains a Logical Model representation of a simp
 
 The guide provides all the necessary tools and files to try out FML to map DHIS2 metadata to FHIR resources. Follow the instructions below to set up your environment, compile the IG, and run transformations using the FHIR Validator CLI.
 
+The IG has now been published and is available here: https://johanghole.github.io/dhis2-patient-enrollment-ig/
+
 ## Prerequisites
 
 ### Required Tools and Resources
