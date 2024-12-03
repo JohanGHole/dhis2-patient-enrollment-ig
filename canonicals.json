@@ -1,0 +1,44 @@
+[
+  {
+    "id" : "gender-cs",
+    "type" : "CodeSystem",
+    "url" : "http://example.org/CodeSystem/gender-cs",
+    "version" : "0.1.0",
+    "name" : "GenderCS"
+  },
+  {
+    "id" : "Dhis2GenderToAdministrativeGender",
+    "type" : "ConceptMap",
+    "url" : "http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender",
+    "version" : "0.1.0",
+    "name" : "Dhis2GenderToAdministrativeGender"
+  },
+  {
+    "id" : "patient.enrollment",
+    "type" : "ImplementationGuide",
+    "url" : "http://example.org/ImplementationGuide/patient.enrollment",
+    "version" : "0.1.0",
+    "name" : "PatientEnrollmentIG"
+  },
+  {
+    "id" : "PatientEnrollmentProgram",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/StructureDefinition/PatientEnrollmentProgram",
+    "version" : "0.1.0",
+    "name" : "PatientEnrollmentProgram"
+  },
+  {
+    "id" : "PatientEnrollmentToPatientResource",
+    "type" : "StructureMap",
+    "url" : "http://example.org/StructureMap/patientEnrollmentToPatientResource",
+    "version" : "0.1.0",
+    "name" : "PatientEnrollmentToPatientResource"
+  },
+  {
+    "id" : "gender-vs",
+    "type" : "ValueSet",
+    "url" : "http://example.org/ValueSet/gender-vs",
+    "version" : "0.1.0",
+    "name" : "GenderVS"
+  }
+]

@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Patient/TransformedPatient> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TransformedPatient"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient TransformedPatient</b></p><a name=\"TransformedPatient\"> </a><a name=\"hcTransformedPatient\"> </a><a name=\"TransformedPatient-en-US\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">John Doe  Male, DoB: 2024-12-02 ( 1269920)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:Test@test.com\">Test@test.com</a></li><li>Lesja Innlandet 2665 Norway </li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "1269920" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Doe" ] ;
+     fhir:given ( [ fhir:v "John" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "Test@test.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2024-12-02"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:city [ fhir:v "Lesja" ] ;
+     fhir:state [ fhir:v "Innlandet" ] ;
+     fhir:postalCode [ fhir:v "2665" ] ;
+     fhir:country [ fhir:v "Norway" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

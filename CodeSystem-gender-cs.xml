@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="gender-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem gender-cs</b></p><a name="gender-cs"> </a><a name="hcgender-cs"> </a><a name="gender-cs-en-US"> </a><p>This  code system <code>http://example.org/CodeSystem/gender-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">Male<a name="gender-cs-Male"> </a></td></tr><tr><td style="white-space:nowrap">Female<a name="gender-cs-Female"> </a></td></tr></table></div>
+  </text>
+  <url value="http://example.org/CodeSystem/gender-cs"/>
+  <version value="0.1.0"/>
+  <name value="GenderCS"/>
+  <title value="Gender"/>
+  <status value="draft"/>
+  <date value="2024-12-03T19:57:38+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/dhis2"/>
+    </telecom>
+  </contact>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="Male"/>
+    <display value="Male"/>
+  </concept>
+  <concept>
+    <code value="Female"/>
+    <display value="Female"/>
+  </concept>
+</CodeSystem>

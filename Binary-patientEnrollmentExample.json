@@ -1,0 +1,6 @@
+{
+  "resourceType" : "Binary",
+  "id" : "patientEnrollmentExample",
+  "contentType" : "application/fhir+json",
+  "data" : "ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL2V4YW1wbGUub3JnL1N0cnVjdHVyZURlZmluaXRpb24vUGF0aWVudEVucm9sbG1lbnRQcm9ncmFtIiwKICAiZW5yb2xsbWVudERhdGUiOiAiMjAyNC0wMS0wMSIsCiAgInVuaXF1ZUlkIjogIjEyNjk5MjAiLAogICJmaXJzdE5hbWUiOiAiSm9obiIsCiAgImxhc3ROYW1lIjogIkRvZSIsCiAgImdlbmRlciI6ICJNYWxlIiwKICAiYmlydGhEYXRlIjogIjIwMjQtMTItMDIiLAogICJlbWFpbCI6ICJUZXN0QHRlc3QuY29tIiwKICAiYWRkcmVzcyI6ICJOb3J3YXkiLAogICJjaXR5IjogIkxlc2phIiwKICAic3RhdGUiOiAiSW5ubGFuZGV0IiwKICAiemlwQ29kZSI6IDI2NjUKfQo="
+}

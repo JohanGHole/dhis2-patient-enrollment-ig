@@ -1,0 +1,27 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "gender-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet gender-vs</b></p><a name=\"gender-vs\"> </a><a name=\"hcgender-vs\"> </a><a name=\"gender-vs-en-US\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-gender-cs.html\"><code>http://example.org/CodeSystem/gender-cs</code></a></li></ul></div>"
+  },
+  "url" : "http://example.org/ValueSet/gender-vs",
+  "version" : "0.1.0",
+  "name" : "GenderVS",
+  "title" : "Gender value set",
+  "status" : "draft",
+  "date" : "2024-12-03T19:57:38+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/dhis2"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://example.org/CodeSystem/gender-cs"
+    }]
+  }
+}

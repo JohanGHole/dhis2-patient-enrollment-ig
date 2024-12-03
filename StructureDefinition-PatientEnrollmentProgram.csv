@@ -1,0 +1,27 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"PatientEnrollmentProgram","PatientEnrollmentProgram","","","",0,*,"","","","null {[]} {[]}
+","Patient Enrollment Program","A tracker program to manage patient information, designed for mapping to the FHIR Patient resource. This program captures key demographic and identifying details required for patient enrollment.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"PatientEnrollmentProgram.enrollmentDate","PatientEnrollmentProgram.enrollmentDate","","","",1,1,"","","","date {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.enrollmentDate",1,1,"",""
+"PatientEnrollmentProgram.incidentDate","PatientEnrollmentProgram.incidentDate","","","",0,1,"","","","date {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.incidentDate",0,1,"",""
+"PatientEnrollmentProgram.uniqueId","PatientEnrollmentProgram.uniqueId","","","",0,1,"","","","string {[]} {[]}
+","Unique identiifer","Unique identiifer","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.uniqueId",0,1,"",""
+"PatientEnrollmentProgram.firstName","PatientEnrollmentProgram.firstName","","","",0,1,"","","","string {[]} {[]}
+","First name","First name","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.firstName",0,1,"",""
+"PatientEnrollmentProgram.lastName","PatientEnrollmentProgram.lastName","","","",0,1,"","","","string {[]} {[]}
+","Last name","Last name","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.lastName",0,1,"",""
+"PatientEnrollmentProgram.gender","PatientEnrollmentProgram.gender","","","",0,1,"","","","code {[]} {[]}
+","Gender","Gender","","","","","","","","","",,"required","","http://example.org/ValueSet/gender-vs","",,,,"PatientEnrollmentProgram.gender",0,1,"",""
+"PatientEnrollmentProgram.birthDate","PatientEnrollmentProgram.birthDate","","","",0,1,"","","","date {[]} {[]}
+","Birth date","Birth date","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.birthDate",0,1,"",""
+"PatientEnrollmentProgram.email","PatientEnrollmentProgram.email","","","",0,1,"","","","string {[]} {[]}
+","Email address","Email address","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.email",0,1,"",""
+"PatientEnrollmentProgram.address","PatientEnrollmentProgram.address","","","",0,1,"","","","string {[]} {[]}
+","Country","Country","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.address",0,1,"",""
+"PatientEnrollmentProgram.city","PatientEnrollmentProgram.city","","","",0,1,"","","","string {[]} {[]}
+","City","City","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.city",0,1,"",""
+"PatientEnrollmentProgram.state","PatientEnrollmentProgram.state","","","",0,1,"","","","string {[]} {[]}
+","State","State","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.state",0,1,"",""
+"PatientEnrollmentProgram.zipCode","PatientEnrollmentProgram.zipCode","","","",0,1,"","","","decimal {[]} {[]}
+","Zip code","Zip code","","","","","","","","","",,,,,"",,,,"PatientEnrollmentProgram.zipCode",0,1,"",""

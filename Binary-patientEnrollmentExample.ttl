@@ -1,0 +1,15 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/Binary/patientEnrollmentExample> a fhir:Binary ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "patientEnrollmentExample"] ; # 
+  fhir:contentType [ fhir:v "application/fhir+json"] ; # 
+  fhir:data [ fhir:v "ewogICJyZXNvdXJjZVR5cGUiOiAiaHR0cDovL2V4YW1wbGUub3JnL1N0cnVjdHVyZURlZmluaXRpb24vUGF0aWVudEVucm9sbG1lbnRQcm9ncmFtIiwKICAiZW5yb2xsbWVudERhdGUiOiAiMjAyNC0wMS0wMSIsCiAgInVuaXF1ZUlkIjogIjEyNjk5MjAiLAogICJmaXJzdE5hbWUiOiAiSm9obiIsCiAgImxhc3ROYW1lIjogIkRvZSIsCiAgImdlbmRlciI6ICJNYWxlIiwKICAiYmlydGhEYXRlIjogIjIwMjQtMTItMDIiLAogICJlbWFpbCI6ICJUZXN0QHRlc3QuY29tIiwKICAiYWRkcmVzcyI6ICJOb3J3YXkiLAogICJjaXR5IjogIkxlc2phIiwKICAic3RhdGUiOiAiSW5ubGFuZGV0IiwKICAiemlwQ29kZSI6IDI2NjUKfQo="^^xsd:base64Binary] . # 
+
+# -------------------------------------------------------------------------------------
+

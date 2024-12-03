@@ -1,0 +1,12 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/CodeSystem/gender-cs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GenderCS",
+      "title" : "Gender",
+      "description" : null
+    }
+  ]
+}

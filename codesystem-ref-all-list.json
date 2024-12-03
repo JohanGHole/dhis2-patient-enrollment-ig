@@ -1,0 +1,28 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/CodeSystem/gender-cs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GenderCS",
+      "title" : "Gender",
+      "description" : null,
+      "uses" : {
+      },
+      "ValueSet-gender-vs.html" : "Gender value set",
+      "ConceptMap-Dhis2GenderToAdministrativeGender.html" : "ConceptMap to and from DHIS2 Gender option set to administrative gender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "ConceptMap-Dhis2GenderToAdministrativeGender.html" : "ConceptMap to and from DHIS2 Gender option set to administrative gender"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://example.org/ValueSet/gender-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "GenderVS",
+      "title" : "Gender value set",
+      "description" : null,
+      "systems" : ["http://example.org/CodeSystem/gender-cs"]
+    }
+  ]
+}

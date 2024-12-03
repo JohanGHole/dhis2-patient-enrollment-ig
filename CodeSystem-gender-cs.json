@@ -1,0 +1,32 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "gender-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem gender-cs</b></p><a name=\"gender-cs\"> </a><a name=\"hcgender-cs\"> </a><a name=\"gender-cs-en-US\"> </a><p>This  code system <code>http://example.org/CodeSystem/gender-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Male<a name=\"gender-cs-Male\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Female<a name=\"gender-cs-Female\"> </a></td></tr></table></div>"
+  },
+  "url" : "http://example.org/CodeSystem/gender-cs",
+  "version" : "0.1.0",
+  "name" : "GenderCS",
+  "title" : "Gender",
+  "status" : "draft",
+  "date" : "2024-12-03T19:57:38+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://example.org/dhis2"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "Male",
+    "display" : "Male"
+  },
+  {
+    "code" : "Female",
+    "display" : "Female"
+  }]
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="e22031d1-0c42-4038-9eeb-75a19d528113"/>
+  <meta>
+    <lastUpdated value="2024-12-03T19:57:38.547+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://example.org/ValueSet/gender-vs"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>Generated Narrative: ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-gender-cs.html">codesystem Gender v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://example.org/CodeSystem/gender-cs-Male"> </a>  
+                  <a href="CodeSystem-gender-cs.html#gender-cs-Male">Male</a>
+                </td>
+                <td>http://example.org/CodeSystem/gender-cs</td>
+                <td>Male</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://example.org/CodeSystem/gender-cs-Female"> </a>  
+                  <a href="CodeSystem-gender-cs.html#gender-cs-Female">Female</a>
+                </td>
+                <td>http://example.org/CodeSystem/gender-cs</td>
+                <td>Female</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://example.org/ValueSet/gender-vs"/>
+        <version value="0.1.0"/>
+        <name value="GenderVS"/>
+        <title value="Gender value set"/>
+        <status value="draft"/>
+        <date value="2024-12-03T19:57:38+00:00"/>
+        <expansion>
+          <identifier value="urn:uuid:6a4fa32e-c874-43cc-bdda-1b51b13652b1"/>
+          <timestamp value="2024-12-03T19:57:48+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://example.org/CodeSystem/gender-cs|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://example.org/CodeSystem/gender-cs"/>
+            <code value="Male"/>
+            <display value="Male"/>
+          </contains>
+          <contains>
+            <system value="http://example.org/CodeSystem/gender-cs"/>
+            <code value="Female"/>
+            <display value="Female"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

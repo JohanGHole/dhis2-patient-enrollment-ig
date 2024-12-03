@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "e22031d1-0c42-4038-9eeb-75a19d528113",
+  "meta" : {
+    "lastUpdated" : "2024-12-03T19:57:38.547+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://example.org/ValueSet/gender-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-gender-cs.html\">codesystem Gender v0.1.0 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://example.org/CodeSystem/gender-cs-Male\"> </a>\u00a0\u00a0<a href=\"CodeSystem-gender-cs.html#gender-cs-Male\">Male</a></td><td>http://example.org/CodeSystem/gender-cs</td><td>Male</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://example.org/CodeSystem/gender-cs-Female\"> </a>\u00a0\u00a0<a href=\"CodeSystem-gender-cs.html#gender-cs-Female\">Female</a></td><td>http://example.org/CodeSystem/gender-cs</td><td>Female</td></tr></table></div>"
+      },
+      "url" : "http://example.org/ValueSet/gender-vs",
+      "version" : "0.1.0",
+      "name" : "GenderVS",
+      "title" : "Gender value set",
+      "status" : "draft",
+      "date" : "2024-12-03T19:57:38+00:00",
+      "expansion" : {
+        "identifier" : "urn:uuid:6a4fa32e-c874-43cc-bdda-1b51b13652b1",
+        "timestamp" : "2024-12-03T19:57:48+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://example.org/CodeSystem/gender-cs|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://example.org/CodeSystem/gender-cs",
+          "code" : "Male",
+          "display" : "Male"
+        },
+        {
+          "system" : "http://example.org/CodeSystem/gender-cs",
+          "code" : "Female",
+          "display" : "Female"
+        }]
+      }
+    }
+  }]
+}

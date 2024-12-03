@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://example.org/CodeSystem/gender-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "gender-cs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem gender-cs</b></p><a name=\"gender-cs\"> </a><a name=\"hcgender-cs\"> </a><a name=\"gender-cs-en-US\"> </a><p>This  code system <code>http://example.org/CodeSystem/gender-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Male<a name=\"gender-cs-Male\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Female<a name=\"gender-cs-Female\"> </a></td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://example.org/CodeSystem/gender-cs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "GenderCS"] ; # 
+  fhir:title [ fhir:v "Gender"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-12-03T19:57:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://example.org/dhis2" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Male" ] ;
+     fhir:display [ fhir:v "Male" ]
+  ] [
+     fhir:code [ fhir:v "Female" ] ;
+     fhir:display [ fhir:v "Female" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

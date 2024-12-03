@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="TransformedPatient"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient TransformedPatient</b></p><a name="TransformedPatient"> </a><a name="hcTransformedPatient"> </a><a name="TransformedPatient-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">John Doe  Male, DoB: 2024-12-02 ( 1269920)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:Test@test.com">Test@test.com</a></li><li>Lesja Innlandet 2665 Norway </li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <value value="1269920"/>
+  </identifier>
+  <name>
+    <family value="Doe"/>
+    <given value="John"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="Test@test.com"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="2024-12-02"/>
+  <address>
+    <city value="Lesja"/>
+    <state value="Innlandet"/>
+    <postalCode value="2665"/>
+    <country value="Norway"/>
+  </address>
+</Patient>

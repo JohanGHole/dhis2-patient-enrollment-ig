@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="Dhis2GenderToAdministrativeGender"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableconceptmap"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableconceptmap"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap Dhis2GenderToAdministrativeGender</b></p><a name="Dhis2GenderToAdministrativeGender"> </a><a name="hcDhis2GenderToAdministrativeGender"> </a><a name="Dhis2GenderToAdministrativeGender-en-US"> </a><p>Mapping from (not specified) to (not specified)</p><br/><p><b>Group 1 </b>Mapping from <a href="CodeSystem-gender-cs.html">Gender</a> to <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>Male</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>male</td></tr><tr><td>Female</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>female</td></tr></table><hr/><p><b>Group 2 </b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-administrative-gender.html">AdministrativeGender</a> to <a href="CodeSystem-gender-cs.html">Gender</a></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>male</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Male</td></tr><tr><td>female</td><td><a href="http://hl7.org/fhir/extensions/5.1.0/CodeSystem-concept-map-equivalence.html#equivalent" title="equivalent">is equivalent to</a></td><td>Female</td></tr></table></div>
+  </text>
+  <url value="http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender"/>
+  <version value="0.1.0"/>
+  <name value="Dhis2GenderToAdministrativeGender"/>
+  <title value="ConceptMap to and from DHIS2 Gender option set to administrative gender"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2024-12-03T19:57:38+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/dhis2"/>
+    </telecom>
+  </contact>
+  <description value="Mapping to and from DHIS2 gender option set coding to FHIR Administrative Gender."/>
+  <group>
+    <source value="http://example.org/CodeSystem/gender-cs"/>
+    <target value="http://hl7.org/fhir/administrative-gender"/>
+    <element>
+      <code value="Male"/>
+      <target>
+        <code value="male"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="Female"/>
+      <target>
+        <code value="female"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+  <group>
+    <source value="http://hl7.org/fhir/administrative-gender"/>
+    <target value="http://example.org/CodeSystem/gender-cs"/>
+    <element>
+      <code value="male"/>
+      <target>
+        <code value="Male"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="female"/>
+      <target>
+        <code value="Female"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
