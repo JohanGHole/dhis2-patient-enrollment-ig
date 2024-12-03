@@ -17,7 +17,7 @@
   fhir:name [ fhir:v "PatientEnrollmentProgram"] ; # 
   fhir:title [ fhir:v "Patient Enrollment Program"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-03T20:00:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-03T20:03:30+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "DHIS2"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "DHIS2" ] ;

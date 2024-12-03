@@ -109,8 +109,8 @@ ERROR: /github/workspace/output/ValueSet-gender-vs.xml.html#/html/body/div/div/d
 ERROR: /github/workspace/output/ValueSet-gender-vs.xml.html#/html/body/div/div/div/p/span/a at Line 281, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 305, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/span/a at Line 312, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 238, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/span/a at Line 245, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 240, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/span/a at Line 247, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 180, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/span/a at Line 187, column 108: The link 'license.html' for "License" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
