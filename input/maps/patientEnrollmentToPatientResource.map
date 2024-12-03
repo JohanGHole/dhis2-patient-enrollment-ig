@@ -1,0 +1,30 @@
+map "http://example.org/StructureMap/patientEnrollmentToPatientResource" = "PatientEnrollmentToPatientResource"
+
+uses "http://example.org/StructureDefinition/PatientEnrollmentProgram" alias PatientProgram as source 
+uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
+
+group patientEnrollmentToPatientResource(source src : PatientProgram, target tgt : Patient) {
+    src.uniqueId as id -> tgt.identifier as identifier then {
+        id -> identifier.value = id "SetIdentifierValue";
+    } "SetIdentifier";
+    src -> tgt.name as pname then patientEnrollmentToHumanName(src, pname) "SetHumanName";
+    src -> tgt.address as paddress then patientEnrollmentToAddress(src, paddress) "SetAddress";
+    src.birthDate as dob -> tgt.birthDate = dob "SetBirthDate";
+    src.gender as gender -> tgt.gender = translate(gender, 'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender','code') "SetGender";
+    src.email as email -> tgt.telecom as contactPoint then {
+        email -> contactPoint.system = 'email' "SetContactPointSystem";
+        email as mail -> contactPoint.value = mail "SetContactPointValue";
+    } "SetEmail";
+}
+
+group patientEnrollmentToHumanName(source src : PatientProgram, target tgt : HumanName) {
+    src.firstName as fn -> tgt.given = fn;
+    src.lastName as ln -> tgt.family = ln;
+}
+
+group patientEnrollmentToAddress(source src : PatientProgram, target tgt : Address) {
+    src.address as country -> tgt.country = country;
+    src.city as city -> tgt.city = city;
+    src.state as st -> tgt.state = st;
+    src.zipCode as zip -> tgt.postalCode = zip;
+}
