@@ -14,7 +14,7 @@ group patientEnrollmentToPatientResource(source src : PatientProgram, target tgt
     src -> tgt.name as pname then patientEnrollmentToHumanName(src, pname) "SetHumanName";
     src -> tgt.address as paddress then patientEnrollmentToAddress(src, paddress) "SetAddress";
     src.birthDate as dob -> tgt.birthDate = dob "SetBirthDate";
-    // The translate transform can be used when 
+    // The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept) 
     src.gender as gender -> tgt.gender = translate(gender, 'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender','code') "SetGender";
     src.email as email -> tgt.telecom as contactPoint then {
         email -> contactPoint.system = 'email' "SetContactPointSystem";
