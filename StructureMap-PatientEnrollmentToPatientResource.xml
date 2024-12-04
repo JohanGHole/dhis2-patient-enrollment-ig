@@ -6,16 +6,22 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureMap PatientEnrollmentToPatientResource</b></p><a name="PatientEnrollmentToPatientResource"> </a><a name="hcPatientEnrollmentToPatientResource"> </a><a name="PatientEnrollmentToPatientResource-en-US"> </a><pre class="fml">
 <b>map</b><span style="color: navy"> &quot;</span>http://example.org/StructureMap/patientEnrollmentToPatientResource<span style="color: navy">&quot; = &quot;</span>PatientEnrollmentToPatientResource<span style="color: navy">&quot;
 
-</span><b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-PatientEnrollmentProgram.html" title="Patient Enrollment Program">http://example.org/StructureDefinition/PatientEnrollmentProgram</a><span style="color: navy">&quot; </span><b>alias </b>PatientProgram <b>as </b><b>source</b>
+</span><span style="color: navy">// </span><span style="color: green">Reference the structure of source and target</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-PatientEnrollmentProgram.html" title="Patient Enrollment Program">http://example.org/StructureDefinition/PatientEnrollmentProgram</a><span style="color: navy">&quot; </span><b>alias </b>PatientProgram <b>as </b><b>source</b>
 <b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/patient.html" title="Patient">http://hl7.org/fhir/StructureDefinition/Patient</a><span style="color: navy">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>
 
+<span style="color: navy">// </span><span style="color: green">main group - contains transform rules for a given source and target input</span>
 <b>group </b>patientEnrollmentToPatientResource<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>PatientProgram, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>Patient<span style="color: navy">)</span><span style="color: navy"> {
-</span>  src.uniqueId<b> as </b><span style="color: maroon">id</span><span style="color: navy"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
+</span>  <span style="color: navy">// </span><span style="color: green">Dependent rules - identified using the `then` keyword. They specify what additional rules are evaluated when the rule is complete</span>
+  src.uniqueId<b> as </b><span style="color: maroon">id</span><span style="color: navy"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
 </span>    id<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id</span> <i>&quot;SetIdentifierValue&quot;</i><span style="color: navy">;</span>
   <span style="color: navy">}</span> <i>&quot;SetIdentifier&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Dependent rules may also reference other groups</span>
   src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">pname</span><b> then </b>patientEnrollmentToHumanName<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pname</span><span style="color: navy">)</span> <i>&quot;SetHumanName&quot;</i><span style="color: navy">;</span>
   src<span style="color: navy"><b> -&gt; </b></span>tgt.address<b> as </b><span style="color: maroon">paddress</span><b> then </b>patientEnrollmentToAddress<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">paddress</span><span style="color: navy">)</span> <i>&quot;SetAddress&quot;</i><span style="color: navy">;</span>
   src.birthDate<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>&quot;SetBirthDate&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when</span>
   src.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>tgt.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
   src.email<b> as </b><span style="color: maroon">email</span><span style="color: navy"><b> -&gt; </b></span>tgt.telecom<b> as </b><span style="color: maroon">contactPoint</span><b> then</b><span style="color: navy"> {
 </span>    email<span style="color: navy"><b> -&gt; </b></span>contactPoint.system = <span style="color: blue">'email'</span> <i>&quot;SetContactPointSystem&quot;</i><span style="color: navy">;</span>
@@ -23,7 +29,8 @@
   <span style="color: navy">}</span> <i>&quot;SetEmail&quot;</i><span style="color: navy">;</span>
 <span style="color: navy">}
 
-</span><b>group </b>patientEnrollmentToHumanName<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>PatientProgram, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>HumanName<span style="color: navy">)</span><span style="color: navy"> {
+</span><span style="color: navy">// </span><span style="color: green">subgroups - can be referenced from other groups</span>
+<b>group </b>patientEnrollmentToHumanName<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>PatientProgram, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>HumanName<span style="color: navy">)</span><span style="color: navy"> {
 </span>  src.firstName<b> as </b><span style="color: maroon">fn</span><span style="color: navy"><b> -&gt; </b></span>tgt.given = <span style="color: maroon">fn</span><span style="color: navy">;</span>
   src.lastName<b> as </b><span style="color: maroon">ln</span><span style="color: navy"><b> -&gt; </b></span>tgt.family = <span style="color: maroon">ln</span><span style="color: navy">;</span>
 <span style="color: navy">}
@@ -41,7 +48,7 @@
   <version value="0.1.0"/>
   <name value="PatientEnrollmentToPatientResource"/>
   <status value="draft"/>
-  <date value="2024-12-03T20:03:30+00:00"/>
+  <date value="2024-12-04T08:45:25+00:00"/>
   <publisher value="DHIS2"/>
   <contact>
     <name value="DHIS2"/>
@@ -50,6 +57,7 @@
       <value value="http://example.org/dhis2"/>
     </telecom>
   </contact>
+  <description value="Reference the structure of source and target"/>
   <structure>
     <url value="http://example.org/StructureDefinition/PatientEnrollmentProgram"/>
     <mode value="source"/>
@@ -63,6 +71,7 @@
   <group>
     <name value="patientEnrollmentToPatientResource"/>
     <typeMode value="none"/>
+    <documentation value="main group - contains transform rules for a given source and target input"/>
     <input>
       <name value="src"/>
       <type value="PatientProgram"/>
@@ -225,6 +234,7 @@
   <group>
     <name value="patientEnrollmentToHumanName"/>
     <typeMode value="none"/>
+    <documentation value="subgroups - can be referenced from other groups"/>
     <input>
       <name value="src"/>
       <type value="PatientProgram"/>

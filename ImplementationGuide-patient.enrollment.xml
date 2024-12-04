@@ -9,7 +9,7 @@
   <version value="0.1.0"/>
   <name value="PatientEnrollmentIG"/>
   <status value="draft"/>
-  <date value="2024-12-03T20:03:30+00:00"/>
+  <date value="2024-12-04T08:45:25+00:00"/>
   <publisher value="DHIS2"/>
   <contact>
     <name value="DHIS2"/>
@@ -513,6 +513,7 @@
       <reference>
         <reference value="StructureMap/PatientEnrollmentToPatientResource"/>
       </reference>
+      <description value="Reference the structure of source and target"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

@@ -16,7 +16,7 @@
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PatientEnrollmentIG"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-12-03T20:03:30+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-12-04T08:45:25+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "DHIS2"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "DHIS2" ] ;
@@ -590,7 +590,8 @@
        fhir:reference [
          fhir:link <http://example.org/StructureMap/PatientEnrollmentToPatientResource> ;
          fhir:reference [ fhir:v "StructureMap/PatientEnrollmentToPatientResource" ]
-       ]
+       ] ;
+       fhir:description [ fhir:v "Reference the structure of source and target" ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

@@ -1,10 +1,10 @@
 PatientEnrollmentIG : Validation Results
 =========================================
 
-err = 7, warn = 16, info = 5
+err = 7, warn = 15, info = 5
 IG Publisher Version: 1.7.5
-Generated Tue Dec 03 20:03:46 UTC 2024. FHIR version 4.0.1 for patient.enrollment#0.1.0 (canonical = http://example.org)
- Build Errors : 93 / 9 / 0
+Generated Wed Dec 04 08:45:41 UTC 2024. FHIR version 4.0.1 for patient.enrollment#0.1.0 (canonical = http://example.org)
+ Build Errors : 93 / 8 / 0
  /github/workspace/fsh-generated/resources/Binary-patientEnrollmentExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-gender-cs : 0 / 3 / 2
  /github/workspace/fsh-generated/resources/ConceptMap-Dhis2GenderToAdministrativeGender : 2 / 2 / 1
@@ -18,7 +18,6 @@ Generated Tue Dec 03 20:03:46 UTC 2024. FHIR version 4.0.1 for patient.enrollmen
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/gender-vs.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource CodeSystem/gender-cs.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/PatientEnrollmentToPatientResource.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureMap/PatientEnrollmentToPatientResource.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Binary/patientEnrollmentExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/TransformedPatient.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /github/workspace/output/Binary-patientEnrollmentExample.change.history.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
@@ -87,14 +86,14 @@ ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource-
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource-testing.html#/html/body/div/div/div/p/span/a at Line 262, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.change.history.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.change.history.html#/html/body/div/div/div/p/span/a at Line 231, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/a at Line 307, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/span/a at Line 314, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/a at Line 684, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/span/a at Line 691, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/a at Line 497, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/span/a at Line 504, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/a at Line 605, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/span/a at Line 612, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/a at Line 319, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/span/a at Line 326, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/a at Line 687, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/span/a at Line 694, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/a at Line 500, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/span/a at Line 507, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/a at Line 616, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/span/a at Line 623, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs-testing.html#/html/body/div/div/div/p/a at Line 255, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs-testing.html#/html/body/div/div/div/p/span/a at Line 262, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs.change.history.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
@@ -107,8 +106,8 @@ ERROR: /github/workspace/output/ValueSet-gender-vs.ttl.html#/html/body/div/div/d
 ERROR: /github/workspace/output/ValueSet-gender-vs.ttl.html#/html/body/div/div/div/p/span/a at Line 289, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs.xml.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs.xml.html#/html/body/div/div/div/p/span/a at Line 281, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 305, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/span/a at Line 312, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 308, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/span/a at Line 315, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 240, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/span/a at Line 247, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 180, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved

@@ -9,8 +9,8 @@
       "description" : null,
       "uses" : {
       },
-      "ValueSet-gender-vs.html" : "Gender value set",
-      "ConceptMap-Dhis2GenderToAdministrativeGender.html" : "ConceptMap to and from DHIS2 Gender option set to administrative gender"
+      "ConceptMap-Dhis2GenderToAdministrativeGender.html" : "ConceptMap to and from DHIS2 Gender option set to administrative gender",
+      "ValueSet-gender-vs.html" : "Gender value set"
     },
     {
       "url" : "http://hl7.org/fhir/administrative-gender",

@@ -4,7 +4,6 @@ PatientEnrollmentIG
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/gender-vs.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource CodeSystem/gender-cs.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Error - Unable to find ImplementationGuide.definition.resource.name for the resource StructureMap/PatientEnrollmentToPatientResource.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list. (REQUIRED)
-Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource StructureMap/PatientEnrollmentToPatientResource.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Binary/patientEnrollmentExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Warning - Unable to find ImplementationGuide.definition.resource.description for the resource Patient/TransformedPatient.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list. (INVARIANT)
 Generic: line 0, col 0, Error - The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved (NOTFOUND)
@@ -116,11 +115,11 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /github/workspace/fsh-generated/resources/ValueSet-gender-vs.json: line 1, col 792, Warning - Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present (REQUIRED)
 /github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 0, col 0, Error - Conformance resource /github/workspace/input/maps/patientEnrollmentToPatientResource.map - the canonical URL (http://example.org/StructureMap/PatientEnrollmentToPatientResource) does not match the URL (http://example.org/StructureMap/patientEnrollmentToPatientResource) (INVALID)
 /github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 0, col 0, Error - Resource id/url mismatch: PatientEnrollmentToPatientResource/http://example.org/StructureMap/patientEnrollmentToPatientResource (INVARIANT)
-/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 7690, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
-/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 7874, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
-/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 8096, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
-/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 9076, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
+/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 8701, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
+/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 8885, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
+/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 9107, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
+/github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 1, col 10087, Info - The source statement doesn't assign a variable to the source - check that this is what is intended (INVALID)
 /github/workspace/input/maps/patientEnrollmentToPatientResource.map: line 0, col 0, Error - URL Mismatch http://example.org/StructureMap/PatientEnrollmentToPatientResource vs http://example.org/StructureMap/patientEnrollmentToPatientResource (BUSINESSRULE)
 
-err = 7, warn = 16, info = 5
+err = 7, warn = 15, info = 5
 IG Publisher Version: 1.7.5
