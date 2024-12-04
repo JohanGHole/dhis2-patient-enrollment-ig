@@ -17,16 +17,17 @@
   src.uniqueId<b> as </b><span style="color: maroon">id</span><span style="color: navy"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style="color: maroon">identifier</span><b> then</b><span style="color: navy"> {
 </span>    id<span style="color: navy"><b> -&gt; </b></span>identifier.value = <span style="color: maroon">id</span> <i>&quot;SetIdentifierValue&quot;</i><span style="color: navy">;</span>
   <span style="color: navy">}</span> <i>&quot;SetIdentifier&quot;</i><span style="color: navy">;</span>
-  <span style="color: navy">// </span><span style="color: green">Dependent rules may also reference other groups</span>
-  src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">pname</span><b> then </b>patientEnrollmentToHumanName<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pname</span><span style="color: navy">)</span> <i>&quot;SetHumanName&quot;</i><span style="color: navy">;</span>
-  src<span style="color: navy"><b> -&gt; </b></span>tgt.address<b> as </b><span style="color: maroon">paddress</span><b> then </b>patientEnrollmentToAddress<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">paddress</span><span style="color: navy">)</span> <i>&quot;SetAddress&quot;</i><span style="color: navy">;</span>
-  src.birthDate<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>&quot;SetBirthDate&quot;</i><span style="color: navy">;</span>
-  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept)</span>
-  src.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>tgt.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
   src.email<b> as </b><span style="color: maroon">email</span><span style="color: navy"><b> -&gt; </b></span>tgt.telecom<b> as </b><span style="color: maroon">contactPoint</span><b> then</b><span style="color: navy"> {
 </span>    email<span style="color: navy"><b> -&gt; </b></span>contactPoint.system = <span style="color: blue">'email'</span> <i>&quot;SetContactPointSystem&quot;</i><span style="color: navy">;</span>
     email<b> as </b><span style="color: maroon">mail</span><span style="color: navy"><b> -&gt; </b></span>contactPoint.value = <span style="color: maroon">mail</span> <i>&quot;SetContactPointValue&quot;</i><span style="color: navy">;</span>
   <span style="color: navy">}</span> <i>&quot;SetEmail&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Dependent rules may also reference other groups</span>
+  src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">pname</span><b> then </b>patientEnrollmentToHumanName<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pname</span><span style="color: navy">)</span> <i>&quot;SetHumanName&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>tgt.address<b> as </b><span style="color: maroon">paddress</span><b> then </b>patientEnrollmentToAddress<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">paddress</span><span style="color: navy">)</span> <i>&quot;SetAddress&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Copy rule - simply copy the source value to the target</span>
+  src.birthDate<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>&quot;SetBirthDate&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept)</span>
+  src.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>tgt.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
 <span style="color: navy">}
 
 </span><span style="color: navy">// </span><span style="color: green">subgroups - can be referenced from other groups</span>
@@ -48,7 +49,7 @@
   <version value="0.1.0"/>
   <name value="PatientEnrollmentToPatientResource"/>
   <status value="draft"/>
-  <date value="2024-12-04T08:53:32+00:00"/>
+  <date value="2024-12-04T08:59:02+00:00"/>
   <publisher value="DHIS2"/>
   <contact>
     <name value="DHIS2"/>
@@ -107,6 +108,51 @@
           <transform value="copy"/>
           <parameter>
             <valueId value="id"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="SetEmail"/>
+      <source>
+        <context value="src"/>
+        <element value="email"/>
+        <variable value="email"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="telecom"/>
+        <variable value="contactPoint"/>
+      </target>
+      <rule>
+        <name value="SetContactPointSystem"/>
+        <source>
+          <context value="email"/>
+        </source>
+        <target>
+          <context value="contactPoint"/>
+          <contextType value="variable"/>
+          <element value="system"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="email"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="SetContactPointValue"/>
+        <source>
+          <context value="email"/>
+          <variable value="mail"/>
+        </source>
+        <target>
+          <context value="contactPoint"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="mail"/>
           </parameter>
         </target>
       </rule>
@@ -184,51 +230,6 @@
           <valueString value="code"/>
         </parameter>
       </target>
-    </rule>
-    <rule>
-      <name value="SetEmail"/>
-      <source>
-        <context value="src"/>
-        <element value="email"/>
-        <variable value="email"/>
-      </source>
-      <target>
-        <context value="tgt"/>
-        <contextType value="variable"/>
-        <element value="telecom"/>
-        <variable value="contactPoint"/>
-      </target>
-      <rule>
-        <name value="SetContactPointSystem"/>
-        <source>
-          <context value="email"/>
-        </source>
-        <target>
-          <context value="contactPoint"/>
-          <contextType value="variable"/>
-          <element value="system"/>
-          <transform value="copy"/>
-          <parameter>
-            <valueString value="email"/>
-          </parameter>
-        </target>
-      </rule>
-      <rule>
-        <name value="SetContactPointValue"/>
-        <source>
-          <context value="email"/>
-          <variable value="mail"/>
-        </source>
-        <target>
-          <context value="contactPoint"/>
-          <contextType value="variable"/>
-          <element value="value"/>
-          <transform value="copy"/>
-          <parameter>
-            <valueId value="mail"/>
-          </parameter>
-        </target>
-      </rule>
     </rule>
   </group>
   <group>

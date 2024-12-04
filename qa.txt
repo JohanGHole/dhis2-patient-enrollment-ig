@@ -3,7 +3,7 @@ PatientEnrollmentIG : Validation Results
 
 err = 7, warn = 15, info = 5
 IG Publisher Version: 1.7.5
-Generated Wed Dec 04 08:53:48 UTC 2024. FHIR version 4.0.1 for patient.enrollment#0.1.0 (canonical = http://example.org)
+Generated Wed Dec 04 08:59:19 UTC 2024. FHIR version 4.0.1 for patient.enrollment#0.1.0 (canonical = http://example.org)
  Build Errors : 93 / 8 / 0
  /github/workspace/fsh-generated/resources/Binary-patientEnrollmentExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-gender-cs : 0 / 3 / 2
@@ -86,14 +86,14 @@ ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource-
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource-testing.html#/html/body/div/div/div/p/span/a at Line 262, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.change.history.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.change.history.html#/html/body/div/div/div/p/span/a at Line 231, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/a at Line 319, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/span/a at Line 326, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.html#/html/body/div/div/div/p/span/a at Line 327, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/a at Line 687, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.json.html#/html/body/div/div/div/p/span/a at Line 694, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/a at Line 500, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.ttl.html#/html/body/div/div/div/p/span/a at Line 507, column 108: The link 'license.html' for "License" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/a at Line 616, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
-ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/span/a at Line 623, column 108: The link 'license.html' for "License" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/a at Line 617, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
+ERROR: /github/workspace/output/StructureMap-PatientEnrollmentToPatientResource.xml.html#/html/body/div/div/div/p/span/a at Line 624, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs-testing.html#/html/body/div/div/div/p/a at Line 255, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs-testing.html#/html/body/div/div/div/p/span/a at Line 262, column 108: The link 'license.html' for "License" cannot be resolved
 ERROR: /github/workspace/output/ValueSet-gender-vs.change.history.html#/html/body/div/div/div/p/a at Line 224, column 28: The link 'http://example.org/dhis2' for "DHIS2" cannot be resolved
@@ -138,7 +138,7 @@ WARNING: ValueSet/gender-vs: ValueSet: Published value sets SHOULD conform to th
 ERROR: StructureMap.where(url = 'http://example.org/StructureMap/patientEnrollmentToPatientResource'): Conformance resource /github/workspace/input/maps/patientEnrollmentToPatientResource.map - the canonical URL (http://example.org/StructureMap/PatientEnrollmentToPatientResource) does not match the URL (http://example.org/StructureMap/patientEnrollmentToPatientResource)
 ERROR: StructureMap.url: Resource id/url mismatch: PatientEnrollmentToPatientResource/http://example.org/StructureMap/patientEnrollmentToPatientResource
 INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[0].rule[0].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
-INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[1].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
+INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[1].rule[0].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
 INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[2].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
-INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[5].rule[0].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
+INFORMATION: StructureMap/PatientEnrollmentToPatientResource: StructureMap.group[0].rule[3].source[0]: The source statement doesn't assign a variable to the source - check that this is what is intended
 ERROR: /github/workspace/input/maps/patientEnrollmentToPatientResource: URL Mismatch http://example.org/StructureMap/PatientEnrollmentToPatientResource vs http://example.org/StructureMap/patientEnrollmentToPatientResource
