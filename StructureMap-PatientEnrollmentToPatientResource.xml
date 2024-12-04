@@ -21,7 +21,7 @@
   src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">pname</span><b> then </b>patientEnrollmentToHumanName<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pname</span><span style="color: navy">)</span> <i>&quot;SetHumanName&quot;</i><span style="color: navy">;</span>
   src<span style="color: navy"><b> -&gt; </b></span>tgt.address<b> as </b><span style="color: maroon">paddress</span><b> then </b>patientEnrollmentToAddress<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">paddress</span><span style="color: navy">)</span> <i>&quot;SetAddress&quot;</i><span style="color: navy">;</span>
   src.birthDate<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>&quot;SetBirthDate&quot;</i><span style="color: navy">;</span>
-  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when</span>
+  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept)</span>
   src.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>tgt.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>&quot;SetGender&quot;</i><span style="color: navy">;</span>
   src.email<b> as </b><span style="color: maroon">email</span><span style="color: navy"><b> -&gt; </b></span>tgt.telecom<b> as </b><span style="color: maroon">contactPoint</span><b> then</b><span style="color: navy"> {
 </span>    email<span style="color: navy"><b> -&gt; </b></span>contactPoint.system = <span style="color: blue">'email'</span> <i>&quot;SetContactPointSystem&quot;</i><span style="color: navy">;</span>
@@ -48,7 +48,7 @@
   <version value="0.1.0"/>
   <name value="PatientEnrollmentToPatientResource"/>
   <status value="draft"/>
-  <date value="2024-12-04T08:45:25+00:00"/>
+  <date value="2024-12-04T08:53:32+00:00"/>
   <publisher value="DHIS2"/>
   <contact>
     <name value="DHIS2"/>

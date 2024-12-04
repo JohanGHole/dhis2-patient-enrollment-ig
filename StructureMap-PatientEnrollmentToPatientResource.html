@@ -268,7 +268,7 @@
   src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">pname</span><b> then </b>patientEnrollmentToHumanName<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">pname</span><span style="color: navy">)</span> <i>"SetHumanName"</i><span style="color: navy">;</span>
   src<span style="color: navy"><b> -&gt; </b></span>tgt.address<b> as </b><span style="color: maroon">paddress</span><b> then </b>patientEnrollmentToAddress<span style="color: navy">(</span><span style="color: maroon">src</span><span style="color: navy">, </span><span style="color: maroon">paddress</span><span style="color: navy">)</span> <i>"SetAddress"</i><span style="color: navy">;</span>
   src.birthDate<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>"SetBirthDate"</i><span style="color: navy">;</span>
-  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when</span>
+  <span style="color: navy">// </span><span style="color: green">The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept)</span>
   src.gender<b> as </b><span style="color: maroon">gender</span><span style="color: navy"><b> -&gt; </b></span>tgt.gender = <b>translate</b><span style="color: navy">(</span><span style="color: maroon">gender</span><span style="color: navy">, </span><span style="color: blue">'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender'</span><span style="color: navy">, </span><span style="color: blue">'code'</span><span style="color: navy">)</span> <i>"SetGender"</i><span style="color: navy">;</span>
   src.email<b> as </b><span style="color: maroon">email</span><span style="color: navy"><b> -&gt; </b></span>tgt.telecom<b> as </b><span style="color: maroon">contactPoint</span><b> then</b><span style="color: navy"> {
 </span>    email<span style="color: navy"><b> -&gt; </b></span>contactPoint.system = <span style="color: blue">'email'</span> <i>"SetContactPointSystem"</i><span style="color: navy">;</span>
@@ -314,7 +314,7 @@
 
       <div class="inner-wrapper">
         <p><a name="l827">​</a>
-          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/dhis2">DHIS2</a>.  Package patient.enrollment#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 4, 2024 08:45+0000">2024-12-04</span>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://example.org/dhis2">DHIS2</a>.  Package patient.enrollment#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 4, 2024 08:53+0000">2024-12-04</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"><a name="l840">​</a>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
