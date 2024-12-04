@@ -6,20 +6,26 @@ uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
 
 // main group - contains transform rules for a given source and target input
 group patientEnrollmentToPatientResource(source src : PatientProgram, target tgt : Patient) {
+
     // Dependent rules - identified using the `then` keyword. They specify what additional rules are evaluated when the rule is complete 
     src.uniqueId as id -> tgt.identifier as identifier then {
         id -> identifier.value = id "SetIdentifierValue";
     } "SetIdentifier";
-    // Dependent rules may also reference other groups
-    src -> tgt.name as pname then patientEnrollmentToHumanName(src, pname) "SetHumanName";
-    src -> tgt.address as paddress then patientEnrollmentToAddress(src, paddress) "SetAddress";
-    src.birthDate as dob -> tgt.birthDate = dob "SetBirthDate";
-    // The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept) 
-    src.gender as gender -> tgt.gender = translate(gender, 'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender','code') "SetGender";
+
     src.email as email -> tgt.telecom as contactPoint then {
         email -> contactPoint.system = 'email' "SetContactPointSystem";
         email as mail -> contactPoint.value = mail "SetContactPointValue";
     } "SetEmail";
+
+    // Dependent rules may also reference other groups
+    src -> tgt.name as pname then patientEnrollmentToHumanName(src, pname) "SetHumanName";
+    src -> tgt.address as paddress then patientEnrollmentToAddress(src, paddress) "SetAddress";
+
+    // Copy rule - simply copy the source value to the target
+    src.birthDate as dob -> tgt.birthDate = dob "SetBirthDate";
+
+    // The translate transform can be used when you have a coded source (i.e. CodeSystem, CodableConcept) 
+    src.gender as gender -> tgt.gender = translate(gender, 'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender','code') "SetGender";
 }
 
 // subgroups - can be referenced from other groups
