@@ -1,15 +1,20 @@
 map "http://example.org/StructureMap/patientEnrollmentToPatientResource" = "PatientEnrollmentToPatientResource"
 
+// Reference the structure of source and target
 uses "http://example.org/StructureDefinition/PatientEnrollmentProgram" alias PatientProgram as source 
 uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
 
+// main group - contains transform rules for a given source and target input
 group patientEnrollmentToPatientResource(source src : PatientProgram, target tgt : Patient) {
+    // Dependent rules - identified using the `then` keyword. They specify what additional rules are evaluated when the rule is complete 
     src.uniqueId as id -> tgt.identifier as identifier then {
         id -> identifier.value = id "SetIdentifierValue";
     } "SetIdentifier";
+    // Dependent rules may also reference other groups
     src -> tgt.name as pname then patientEnrollmentToHumanName(src, pname) "SetHumanName";
     src -> tgt.address as paddress then patientEnrollmentToAddress(src, paddress) "SetAddress";
     src.birthDate as dob -> tgt.birthDate = dob "SetBirthDate";
+    // The translate transform can be used when 
     src.gender as gender -> tgt.gender = translate(gender, 'http://example.org/ConceptMap/Dhis2GenderToAdministrativeGender','code') "SetGender";
     src.email as email -> tgt.telecom as contactPoint then {
         email -> contactPoint.system = 'email' "SetContactPointSystem";
@@ -17,6 +22,7 @@ group patientEnrollmentToPatientResource(source src : PatientProgram, target tgt
     } "SetEmail";
 }
 
+// subgroups - can be referenced from other groups
 group patientEnrollmentToHumanName(source src : PatientProgram, target tgt : HumanName) {
     src.firstName as fn -> tgt.given = fn;
     src.lastName as ln -> tgt.family = ln;
